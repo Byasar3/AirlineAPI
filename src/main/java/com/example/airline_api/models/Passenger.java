@@ -20,7 +20,7 @@ public class Passenger {
     @Column(name = "passenger_email")
     private String email;
 
-    @ManyToMany(mappedBy = "flights")
+    @ManyToMany(mappedBy = "passengers")
     @JsonIgnoreProperties({"passengers"})
     private List<Flight> flights;
 
@@ -64,4 +64,6 @@ public class Passenger {
     public void setFlights(List<Flight> flights) {
         this.flights = flights;
     }
+
+
 }
